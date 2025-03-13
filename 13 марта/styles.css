@@ -1,0 +1,102 @@
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  gap: 2px;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.snake {
+  background-color: green;
+}
+
+.food {
+  background-color: red;
+}
+
+body {
+  display: flex;
+}
+
+.controls {
+  flex-grow: 1;
+}
+
+.joystick {
+  position: fixed;
+  left: 90px;
+  top: 350px;
+  display: grid;
+  grid-template-areas:
+    ". up ."
+    "left down right";
+  gap: 10px;
+}
+
+.joystick button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#up {
+  grid-area: up;
+}
+#left {
+  grid-area: left;
+}
+#down {
+  grid-area: down;
+}
+#right {
+  grid-area: right;
+}
+
+
+#score {
+  position: fixed;
+  top: 20px;
+  left: 350px;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#speed-control {
+  position: fixed;
+  top: 70px;
+  left: 350px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#speed-input {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 16px;
+  width: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
